@@ -1,84 +1,220 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Anuj Kaushik - Full Stack Developer</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-    />
-  </head>
-  <body>
-    <header>
-      <nav>
-        <h1>Anuj Kaushik</h1>
-        <div class="nav-links">
-          <ul>
-            <li><a href="">about me</a></li>
-            <li><a href="">resume</a></li>
-            <li><a href="">projects</a></li>
-            <li><a href="">contact</a></li>
-          </ul>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Anuj Kaushik</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=IBM+Plex+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ── NAVIGATION ── -->
+  <nav id="nav">
+    <a href="#hero" class="nav-logo">AK.</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+
+  <!-- ── HERO ── -->
+  <section id="hero">
+    <p class="hero-tag">Based in Roorkee, India</p>
+    <h1>Anuj<br><em>Kaushik</em></h1>
+    <p class="hero-sub">
+      Computer Science student building things for the web —
+      full stack, clean code, and a taste for good UX.
+    </p>
+    <div class="hero-cta">
+      <a href="#projects" class="btn accent">See my work</a>
+      <a href="mailto:anujkaushik2k02@gmail.com" class="btn">Get in touch</a>
+    </div>
+  </section>
+
+
+  <!-- ── ABOUT ── -->
+  <section id="about">
+    <p class="section-label reveal">About</p>
+
+    <div class="about-flex">
+      <div class="about-left">
+        <h2 class="about-heading reveal">
+          Building<br>thoughtful<br><em>interfaces</em>
+        </h2>
+      </div>
+
+      <div class="about-right reveal">
+        <p>
+          I'm a Computer Science undergraduate passionate about web development and building user-friendly digital experiences.
+        </p>
+        <p>
+          My stack is mostly JavaScript-based — React on the front, Node
+          on the back - but I'm comfortable reaching for Python when the
+          problem calls for it.
+        </p>
+        <!-- <p>
+          Outside of code I attended a Data Science workshop at IIT Roorkee
+          and have been steadily picking up new tools — most recently the
+          Postman API certification.
+        </p> -->
+
+        <div class="skills-row">
+          <span class="skill-pill">React.js</span>
+          <span class="skill-pill">Node.js</span>
+          <span class="skill-pill">JavaScript</span>
+          <span class="skill-pill">Python</span>
+          <span class="skill-pill">MongoDB</span>
+          <span class="skill-pill">MySQL</span>
+          <span class="skill-pill">Tailwind CSS</span>
+          <span class="skill-pill">Core PHP</span>
+          <span class="skill-pill">Git</span>
+          <span class="skill-pill">Linux</span>
         </div>
-      </nav>
-    </header>
-    <main>
-      <div class="left-main">
-        <div class="info-card">
-          <div class="top">
-            <div class="image-container">
-              <img src="./assets/images/profile-pic.png" alt="profile-pic" />
-            </div>
-            <h2><span>Anuj</span> <span>Kaushik</span></h2>
-            <p>Full Stack Developer</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ── FEATURED PROJECTS ── -->
+  <section id="projects">
+    <p class="section-label reveal">Featured Projects</p>
+
+    <div class="projects-list">
+
+      <!-- Project 01 -->
+      <div class="project-item reveal">
+        <div class="project-info">
+          <p class="project-num">01</p>
+          <h3 class="project-title">Expirify</h3>
+          <p class="project-desc">
+            A product expiry tracking system using OCR via Google Vision API
+            to extract dates from packaging — reducing food waste with
+            automated alerts.
+          </p>
+        </div>
+        <div class="project-meta">
+          <p class="project-stack">
+            React.js<br>Node.js<br>MongoDB<br>Google Vision API
+          </p>
+          <div class="project-links">
+            <a href="https://github.com/Anuj-kaushik/Expirify-Frontend" target="_blank">GitHub ↗</a>
           </div>
-          <div class="bottom">
-            <a href=""><i class="fa-brands fa-x-twitter fa-xl"></i></a>
-            <a href=""><i class="fa-brands fa-square-linkedin fa-xl"></i></a>
-            <a href=""><i class="fa-brands fa-github fa-xl"></i></a>
-            <a href=""><i class="fa-solid fa-envelope fa-xl"></i></a>
-          </div>
-          
         </div>
       </div>
 
-      <div class="right-main">
-        <div class="my-details">
-          <h3>Hello</h3>
-          <p>Here's who I am and What I do</p>
-          <div class="download-link">
-            <button>resume</button>
-            <button>projects</button>
+      <!-- Project 02 -->
+      <div class="project-item reveal">
+        <div class="project-info">
+          <p class="project-num">02</p>
+          <h3 class="project-title">Blog App</h3>
+          <p class="project-desc">
+            A responsive blog platform with secure auth, dynamic content
+            creation, and cloud storage via Appwrite. Fast and effortless
+            to publish.
+          </p>
+        </div>
+        <div class="project-meta">
+          <p class="project-stack">
+            React.js<br>Tailwind CSS<br>Appwrite<br>Vite
+          </p>
+          <div class="project-links">
+            <a href="https://github.com/Anuj-kaushik/myBlogApp" target="_blank">GitHub ↗</a>
+            <a href="https://my-blog-app-oak-five.vercel.app/" target="_blank">Live ↗</a>
           </div>
-          
-            <p>
-                Turning ideas into interactive, scalable web applications with React, Node.js, and a problem-solver's mindset.
-            </p>
-          
-          
         </div>
       </div>
-    </main>
-    <footer class="footer-links">
-      <p class="copyright">&copy; 2025 by Anuj Kaushik</p>
-      <div class="contact-links">
-        <!-- <p>
-          <span>call</span>
-          <span>1234556789</span> 
-        </p> -->
-        <p>
-          <span>write</span>
-          <span>anujkaushik2k02@gmail.com</span>
-        </p>
-        <p>
-          <span>follow</span>
-          <span><a href=""><i class="fa-brands fa-x-twitter fa-lg"></i></a>
-            <a href=""><i class="fa-brands fa-square-linkedin fa-lg"></i></a>
-            <a href=""><i class="fa-brands fa-github fa-lg"></i></a>
-        </p>
+
+    </div>
+
+    <!-- Link to the full projects page -->
+    <div class="view-all-row reveal">
+      <a href="projects.html" class="view-all-link">View all projects →</a>
+    </div>
+  </section>
+
+
+  <!-- ── EXPERIENCE ── -->
+  <section id="experience">
+    <p class="section-label reveal">Experience</p>
+
+    <!-- Internship -->
+    <div class="exp-item reveal">
+      <div class="exp-date">Jun - Aug 2024</div>
+      <div class="exp-details">
+        <h3 class="exp-role">Intern</h3>
+        <p class="exp-company">Explorin Academy - Summer Internship</p>
+        <ul class="exp-points">
+          <li>Solved 100+ algorithmic problems across data structures and time complexity.</li>
+          <li>Built multiple responsive web apps with a focus on UX and design principles.</li>
+          <li>Attended a 3-day Data Science workshop at IIT Roorkee - Python, data analysis, intro to ML.</li>
+        </ul>
       </div>
-    </footer>
-  </body>
+    </div>
+
+    <!-- Postman cert -->
+    <!-- <div class="exp-item reveal">
+      <div class="exp-date">Jun 2025</div>
+      <div class="exp-details">
+        <h3 class="exp-role">Postman API Fundamentals</h3>
+        <p class="exp-company">Postman — Certification</p>
+        <ul class="exp-points">
+          <li>Certified as Postman API Fundamentals Student Expert.</li>
+        </ul>
+      </div>
+    </div> -->
+
+    <!-- NPTEL cert -->
+    <!-- <div class="exp-item reveal">
+      <div class="exp-date">Jan - Apr 2024</div>
+      <div class="exp-details">
+        <h3 class="exp-role">Computer Network & Internet Protocol</h3>
+        <p class="exp-company">NPTEL - Certification</p>
+        <ul class="exp-points">
+          <li>Completed with a score of 75%.</li>
+        </ul>
+      </div>
+    </div> -->
+
+  </section>
+
+
+  <!-- ── CONTACT ── -->
+  <section id="contact">
+    <p class="section-label reveal">Contact</p>
+    <h2 class="contact-heading reveal">
+      Let's build something<br><em>worth using.</em>
+    </h2>
+    <div class="contact-row reveal">
+      <div class="contact-item">
+        <span class="contact-item-label">Email</span>
+        <a href="mailto:anujkaushik2k02@gmail.com" class="contact-item-value">
+          anujkaushik2k02@gmail.com
+        </a>
+      </div>
+      <div class="contact-item">
+        <span class="contact-item-label">Phone</span>
+        <a href="tel:+919027786975" class="contact-item-value">
+          +91 9027786975
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <span>Anuj Kaushik &copy; 2026</span>
+    <span>Roorkee, Uttarakhand</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
 </html>

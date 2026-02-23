@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects — Anuj Kaushik</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=IBM+Plex+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="bordered">
+      <a href="index.html" class="nav-logo">AK.</a>
+      <ul class="nav-links">
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="index.html#experience">Experience</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- ── PAGE HEADER ── -->
+    <div class="page-header">
+      <a href="index.html" class="back-link">← Back home</a>
+      <h1>All <em>Projects</em></h1>
+
+      <div class="header-meta">
+        <!-- JS updates this count on load and on filter click -->
+        <span class="project-count" id="count"></span>
+
+        <!-- Filter buttons — add a new button when you add a new tag -->
+        <div class="filter-row" id="filters">
+          <button class="filter-btn active" data-tag="all">All</button>
+          <button class="filter-btn" data-tag="react">React</button>
+          <button class="filter-btn" data-tag="node">Node</button>
+          <button class="filter-btn" data-tag="mongodb">MongoDB</button>
+          <!-- <button class="filter-btn" data-tag="appwrite">Appwrite</button> -->
+          <!-- <button class="filter-btn" data-tag="tailwind">Tailwind</button> -->
+          <!-- <button class="filter-btn" data-tag="api">API</button> -->
+          <!-- Add more filter buttons here as you add new tags -->
+        </div>
+      </div>
+    </div>
+
+    <!-- ── PROJECTS GRID ── -->
+    <div class="projects-section">
+      <div class="projects-grid" id="grid">
+        <!--
+        ╔══════════════════════════════════════════════════════╗
+        ║  HOW TO ADD A NEW PROJECT                            ║
+        ║                                                      ║
+        ║  1. Copy a .card block below                         ║
+        ║  2. Increment the card-num                           ║
+        ║  3. Fill in: title, desc, links, tags                ║
+        ║  4. In data-tags="..." add comma-separated tags      ║
+        ║     that match existing filter button data-tag       ║
+        ║     values (or add a new filter button above)        ║
+        ╚══════════════════════════════════════════════════════╝
+      -->
+
+        <!-- Card 01: Expirify -->
+        <div class="card reveal" data-tags="react,node,mongodb,api">
+          <div class="card-header">
+            <span class="card-num">01</span>
+            <div class="card-links">
+              <a href="https://github.com/Anuj-kaushik/Expirify-Frontend" target="_blank"
+                >GitHub ↗</a
+              >
+            </div>
+          </div>
+          <h2 class="card-title">Expirify</h2>
+          <p class="card-desc">
+            A product expiry tracking system using OCR to read manufacturing and expiry dates from
+            packaging - reducing food waste with automated alerts.
+          </p>
+          <div class="card-tags">
+            <span class="tag">React.js</span>
+            <span class="tag">Node.js</span>
+            <span class="tag">MongoDB</span>
+            <span class="tag">Google Vision API</span>
+          </div>
+        </div>
+
+        <!-- Card 02: Blog App -->
+        <div class="card reveal" data-tags="react,appwrite,tailwind">
+          <div class="card-header">
+            <span class="card-num">02</span>
+            <div class="card-links">
+              <a href="https://github.com/Anuj-kaushik/myBlogApp" target="_blank">GitHub ↗</a>
+              <a href="https://my-blog-app-oak-five.vercel.app/" target="_blank">Live ↗</a>
+            </div>
+          </div>
+          <h2 class="card-title">Blog App</h2>
+          <p class="card-desc">
+            A responsive blog platform with secure auth, dynamic content creation, and cloud storage
+            via Appwrite. Fast and effortless to publish.
+          </p>
+          <div class="card-tags">
+            <span class="tag">React.js</span>
+            <span class="tag">Tailwind CSS</span>
+            <span class="tag">Appwrite</span>
+            <span class="tag">Vite</span>
+          </div>
+        </div>
+
+        <!-- Empty state: shown by JS when no cards match filter -->
+        <div class="empty-state" id="emptyState">
+          <p>No projects match that filter.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── FOOTER ── -->
+    <footer>
+      <span>Anuj Kaushik &copy; 2026</span>
+      <span><a href="index.html">← Back to home</a></span>
+    </footer>
+
+    <!-- Our script -->
+    <script src="script.js"></script>
+  </body>
+</html>
